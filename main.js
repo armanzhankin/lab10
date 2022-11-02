@@ -19,8 +19,11 @@ function main(labs){
     for (i = 0; i < labs.length; i++){
         sums.push(get_sum(labs[i]))
     }
-
-    let sums_avg = sums / 7
+    sums_avg = 0
+    for (let j = 0; j < sums.length; j++){
+        sums_avg += sums[j]
+    }
+    sums_avg = sums_avg / 7 / 0.4   
     let quiz1 = 36/0.4
     let total_score = quiz1*0.4+sums_avg*0.6
     const results = {
